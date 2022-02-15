@@ -1,5 +1,5 @@
 <icecast>
-    <hostname>localhost</hostname>
+    <hostname>radio.sanoft.com</hostname>
     <location>Keralam</location>
     <admin>admin</admin>
 
@@ -62,9 +62,9 @@
         <!-- <shoutcast-mount>/stream</shoutcast-mount> -->
     </listen-socket>
     
-    <listen-socket>
+    <!-- <listen-socket>
         <port>80</port>
-    </listen-socket>
+    </listen-socket> -->
     
     <!--
     <listen-socket>
@@ -226,11 +226,9 @@
 
     <security>
         <chroot>0</chroot>
-        
-        <!-- <changeowner>
-	    <user>icecast2</user>
-	    <group>icecast</group>
-        </changeowner> -->
-       
+        <changeowner>
+    	    <user>icecast2</user>
+    	    <group>icecast</group>
+        </changeowner>
     </security>
 </icecast>
