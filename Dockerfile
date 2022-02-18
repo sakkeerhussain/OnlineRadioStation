@@ -12,12 +12,18 @@ RUN mkdir -p ./log/liquidsoap/
 RUN apt-get install -y python3
 RUN python3 --version
 
+ADD ./test-files-server-flask ./test-files-server-flask
+RUN apt-get update 
+RUN apt-get install -y python3-pip
+RUN pip install flask
+
 COPY ./start-service.sh ./start-service.sh
 RUN chmod +x ./start-service.sh
 
 EXPOSE 8000
 EXPOSE 9000
 EXPOSE 8080
+EXPOSE 5000
 
 CMD ["./start-service.sh"]
 # CMD ["python3", "-m", "http.server", "9000"]
