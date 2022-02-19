@@ -1,4 +1,4 @@
-# online-radio-station
+# Online Radio Station
 
 An online radio station setup using icecast and liquidsoap with dockerised setup.
 
