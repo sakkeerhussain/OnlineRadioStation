@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-4-h-0+g*l-qt1o(7m34hr#af$o1&g%z(c8h$uui1s2f)e_4x@4
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['host.docker.internal', 'localhost', '127.0.0.1']
 
 
 # Application definition
@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'scheduler'
 ]
 
 MIDDLEWARE = [
