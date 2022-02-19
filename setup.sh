@@ -10,8 +10,11 @@
 # docker run -d --rm -p 5000:5000 --name online-radio online-radio:latest
 
 
-cd icecast
+cd icecast || exit
 sh ./build-and-run.sh
 
-cd ../liquidsoap
+cd ../liquidsoap || exit
+sh ./build-and-run.sh
+
+cd ../api_server || exit
 sh ./build-and-run.sh

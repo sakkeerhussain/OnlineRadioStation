@@ -8,8 +8,8 @@ set("harbor.bind_addr","0.0.0.0")
 
 def get_schedule_file() = 
   # Get the URI
-  # lines = get_process_lines("curl http://localhost:5000/next")
-  lines = get_process_lines("curl http://host.docker.internal:5000/next")
+  # lines = get_process_lines("curl http://localhost:5000/scheduler/v1/next/")
+  lines = get_process_lines("curl http://host.docker.internal:5000/scheduler/v1/next/")
   uri = list.hd(default="",lines)
   log("play: #{uri}")
   request.create(uri)
