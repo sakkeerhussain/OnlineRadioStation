@@ -1,7 +1,7 @@
 set("init.allow_root",true)
 
 # Log dir
-set("log.file.path","/var/log/liquidsoap-out.log")
+set("log.file.path","./log/liquidsoap.log")
 
 # Serveur settings
 set("harbor.bind_addr","0.0.0.0")

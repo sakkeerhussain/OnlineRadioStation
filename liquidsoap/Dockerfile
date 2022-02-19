@@ -8,6 +8,7 @@ ADD ./music ./music
 
 COPY ./start.sh ./start.sh
 RUN chmod +x ./start.sh
+RUN mkdir log
 
 EXPOSE 8080
 
