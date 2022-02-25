@@ -3,13 +3,6 @@
     <location>Keralam</location>
     <admin>admin</admin>
 
-    <!-- IMPORTANT!
-         Especially for inexperienced users:
-         Start out by ONLY changing all passwords and restarting Icecast.
-         For detailed setup instructions please refer to the documentation.
-         It's also available here: http://icecast.org/docs/
-    -->
-
     <limits>
         <clients>10000</clients>
         <sources>10</sources>
@@ -32,13 +25,13 @@
 
     <authentication>
         <!-- Sources log in with username 'source' -->
-        <source-password>tomsradio</source-password>
+        <source-password>-</source-password>
         <!-- Relays log in with username 'relay' -->
-        <relay-password>tomsradio</relay-password>
+        <relay-password>-</relay-password>
 
         <!-- Admin logs in with the username given below -->
         <admin-user>admin</admin-user>
-        <admin-password>Sanoft@123</admin-password>
+        <admin-password>-</admin-password>
     </authentication>
 
     <!-- set the mountpoint for a shoutcast source to use, the default if not
