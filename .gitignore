@@ -3,3 +3,5 @@
 .idea/
 
 icecast/config.xml
+
+liquidsoap/env-vars.sh

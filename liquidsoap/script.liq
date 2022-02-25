@@ -6,9 +6,11 @@ set("log.file.path","./log/liquidsoap.log")
 # Serveur settings
 set("harbor.bind_addr","0.0.0.0")
 
+icecast_source_password = getenv("ICECAST_SOURCE_PASSWORD")
+liquidsoap_source_password = getenv("LIQUIDSOAP_SOURCE_PASSWORD")
+
 def get_schedule_file() = 
   # Get the URI
-  # lines = get_process_lines("curl http://localhost:5000/scheduler/v1/next/")
   lines = get_process_lines("curl http://host.docker.internal:5000/scheduler/v1/next/")
   uri = list.hd(default="",lines)
   log("play: #{uri}")
@@ -19,17 +21,15 @@ end
 emergency = single("./music/emergency.mp3")
 
 # A playlist
-# sceduled = playlist(mode="normal","./music/songs",reload_mode="watch")
-# sceduled = random([sceduled])
-sceduled = request.dynamic(id="schedule", get_schedule_file)
+scheduled = request.dynamic(id="schedule", get_schedule_file)
 
 # A live source
 live = input.harbor(
        "mount",
        port=8080,
-       password="tomsradio321"
+       password=liquidsoap_source_password
 )
-radio = fallback(track_sensitive=false, [live,sceduled])
+radio = fallback(track_sensitive=false, [live,scheduled])
 
 # fallback
 radio = fallback(track_sensitive=false, [radio,emergency])
@@ -43,7 +43,7 @@ output.icecast(
     user = "source",
     public = true,
     port = 8000,
-    password = "tomsradio",
+    password = icecast_source_password,
     genre = "Surprise",
     name = "RadioStream",
     radio)
