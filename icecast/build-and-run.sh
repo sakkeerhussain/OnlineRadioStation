@@ -1,9 +1,5 @@
 #!/bin/sh
 
-set -o allexport
-source ../env-vars.yml
-set +o allexport
-
 python3 ./generate_config.py
 
 docker build -t online-radio-icecast:latest .
