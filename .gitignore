@@ -4,4 +4,4 @@
 
 icecast/config.xml
 
-liquidsoap/env-vars.sh
+liquidsoap/.env

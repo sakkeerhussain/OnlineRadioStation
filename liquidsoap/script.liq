@@ -1,13 +1,16 @@
 set("init.allow_root",true)
 
 # Log dir
-set("log.file.path","./log/liquidsoap.log")
+set("log.file.path","/var/log/liquidsoap/radioliq.log")
 
 # Serveur settings
 set("harbor.bind_addr","0.0.0.0")
 
 icecast_source_password = getenv("ICECAST_SOURCE_PASSWORD")
 liquidsoap_source_password = getenv("LIQUIDSOAP_SOURCE_PASSWORD")
+
+log("icecast_source_password: #{icecast_source_password}")
+log("liquidsoap_source_password: #{liquidsoap_source_password}")
 
 def get_schedule_file() = 
   # Get the URI
