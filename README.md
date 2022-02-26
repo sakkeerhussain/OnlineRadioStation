@@ -24,18 +24,18 @@ ADMIN_PASSWORD             | The password used to login to the web admin UI     
 
 ## Access Details
 
-###Icecast: 
+### Icecast:
 - Access URL: http://localhost:8000
 - Stream URL: http://localhost:8000/stream
 - Username: admin
 - Password: Loads from env variable 'ICECAST_ADMIN_PASSWORD' or 'password'
 
-###Admin Web UI:
+### Admin Web UI:
 - Access URL: http://localhost:5000
 - Username: admin
 - Password: Loads from env variable 'ADMIN_PASSWORD' or 'password'
  
-###Connect Live Mic:
+### Connect Live Mic:
 - Server Address: localhost
 - Server Port: 8080
 - Mount point: /mount
