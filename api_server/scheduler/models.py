@@ -8,6 +8,7 @@ class MusicSchedule(models.Model):
     play_up_to = models.DateTimeField()
     sequence = models.IntegerField(default=0)
     last_played_at = models.DateTimeField(null=True, blank=True)
+    is_repeat = models.BooleanField(default=True)
 
     def __str__(self):
         return self.music.url if self.music else self.music_url
