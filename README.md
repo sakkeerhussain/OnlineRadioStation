@@ -41,3 +41,9 @@ ADMIN_PASSWORD             | The password used to login to the web admin UI     
 - Mount point: /mount
 - Username: source
 - Password: Loads from env variable 'LIQUIDSOAP_SOURCE_PASSWORD' or 'password'
+
+TODO Items:
+1. Create super user if not existing
+2. Make host configurable in liquidsoap
+3. Make ports configurable
+4. add API_SERVER_HOST to readme

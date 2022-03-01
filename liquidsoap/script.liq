@@ -8,13 +8,15 @@ set("harbor.bind_addr","0.0.0.0")
 
 icecast_source_password = getenv("ICECAST_SOURCE_PASSWORD")
 liquidsoap_source_password = getenv("LIQUIDSOAP_SOURCE_PASSWORD")
+api_server_host = getenv("API_SERVER_HOST")
 
 log("icecast_source_password: #{icecast_source_password}")
 log("liquidsoap_source_password: #{liquidsoap_source_password}")
+log("api_server_host: #{api_server_host}")
 
 def get_schedule_file() = 
   # Get the URI
-  lines = get_process_lines("curl http://host.docker.internal:5000/scheduler/v1/next/")
+  lines = get_process_lines("curl #{api_server_host}/scheduler/v1/next/")
   uri = list.hd(default="",lines)
   log("Music from server: #{uri}")
   request.create(uri)
