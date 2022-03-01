@@ -47,3 +47,6 @@ TODO Items:
 2. Make host configurable in liquidsoap
 3. Make ports configurable
 4. add API_SERVER_HOST to readme
+5. Upload media files to S3 in API server
+6. Install database seperatly and update
+4. add ICECAST_SERVER_HOST to readme
