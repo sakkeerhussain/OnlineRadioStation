@@ -7,7 +7,7 @@ COPY ./config.xml /etc/icecast2/icecast.xml
 COPY ./start.sh ./start.sh
 RUN chmod +x ./start.sh
 
-EXPOSE 8000
+EXPOSE 80
 
 CMD ["./start.sh"]
 

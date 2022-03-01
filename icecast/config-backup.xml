@@ -50,15 +50,11 @@
 
     <!-- You may have multiple <listen-socket> elements -->
     <listen-socket>
-        <port>8000</port>
+        <port>80</port>
         <bind-address>0.0.0.0</bind-address>
         <!-- <shoutcast-mount>/stream</shoutcast-mount> -->
     </listen-socket>
-    
-    <!-- <listen-socket>
-        <port>80</port>
-    </listen-socket> -->
-    
+
     <!--
     <listen-socket>
         <port>8443</port>

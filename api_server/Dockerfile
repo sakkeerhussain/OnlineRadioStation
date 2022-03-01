@@ -8,7 +8,6 @@ RUN apt-get install -y python3-pip
 COPY ./requirements.txt ./requirements.txt
 COPY ./api_server ./api_server
 COPY ./scheduler ./scheduler
-COPY ./db.sqlite3 ./db.sqlite3
 COPY ./manage.py ./manage.py
 COPY ./start.sh ./start.sh
 
