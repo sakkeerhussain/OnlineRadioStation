@@ -45,7 +45,7 @@ output.icecast(
     mount = "stream",
     user = "source",
     public = true,
-    port = 8000,
+    port = 80,
     password = icecast_source_password,
     genre = "Surprise",
     name = "RadioStream",
