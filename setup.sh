@@ -1,5 +1,7 @@
 #!/bin/sh
 
+python3 ./generate_env_vars.py
+
 cd icecast || exit
 sh ./build-and-run.sh
 

@@ -1,7 +1,5 @@
 #!/bin/sh
 
-python3 ./generate_env_vars.py
-
 docker build -t online-radio-liquidsoap:latest .
 docker stop online-radio-liquidsoap
 docker rm online-radio-liquidsoap
