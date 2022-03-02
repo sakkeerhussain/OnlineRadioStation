@@ -14,6 +14,11 @@ backend_database_user = os.environ.get('BACKEND_DATABASE_USER')
 backend_database_password = os.environ.get('BACKEND_DATABASE_PASSWORD')
 backend_database_host = os.environ.get('BACKEND_DATABASE_HOST')
 backend_database_port = os.environ.get('BACKEND_DATABASE_PORT')
+backend_aws_key_id = os.environ.get('AWS_ACCESS_KEY_ID')
+backend_aws_access_key = os.environ.get('AWS_SECRET_ACCESS_KEY')
+backend_aws_file_storage = os.environ.get('DEFAULT_FILE_STORAGE')
+backend_aws_bucket_name = os.environ.get('AWS_STORAGE_BUCKET_NAME')
+backend_aws_s3_region = os.environ.get('AWS_S3_REGION_NAME')
 
 
 file = open('.env', 'w')
@@ -40,4 +45,16 @@ if backend_database_host:
     file.write(f'BACKEND_DATABASE_HOST={backend_database_host}\n')
 if backend_database_port:
     file.write(f'BACKEND_DATABASE_PORT={backend_database_port}\n')
+
+if backend_aws_key_id:
+    file.write(f'AWS_ACCESS_KEY_ID={backend_aws_key_id}\n')
+if backend_aws_access_key:
+    file.write(f'AWS_SECRET_ACCESS_KEY={backend_aws_access_key}\n')
+if backend_aws_file_storage:
+    file.write(f'DEFAULT_FILE_STORAGE={backend_aws_file_storage}\n')
+if backend_aws_bucket_name:
+    file.write(f'AWS_STORAGE_BUCKET_NAME={backend_aws_bucket_name}\n')
+if backend_aws_s3_region:
+    file.write(f'AWS_S3_REGION_NAME={backend_aws_s3_region}\n')
+
 file.close()

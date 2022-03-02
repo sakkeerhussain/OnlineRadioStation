@@ -17,6 +17,11 @@ BACKEND_DATABASE_USER      |                          |
 BACKEND_DATABASE_PASSWORD  |                          | 
 BACKEND_DATABASE_HOST      |                          | 
 BACKEND_DATABASE_PORT      |                          | 
+AWS_ACCESS_KEY_ID      |                          | 
+AWS_SECRET_ACCESS_KEY      |                          | 
+DEFAULT_FILE_STORAGE      |                          | 
+AWS_STORAGE_BUCKET_NAME      |                          | 
+AWS_S3_REGION_NAME      |                          | 
 
 ## How to run
 1. Update icecast admin password in environment variable 'ICECAST_ADMIN_PASSWORD' otherwise will default to 'password' 

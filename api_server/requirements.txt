@@ -1,2 +1,4 @@
 django==4.0.2
 tzdata==2021.5
+boto3==1.21.10
+django-storages==1.12.3
