@@ -3,14 +3,20 @@
 An online radio station setup using icecast and liquidsoap with dockerised setup.
 
 ## Environment Variables
-Name                       | Description                                                              | Default Value
----------------------------|--------------------------------------------------------------------------| ---------------
-ICECAST_ADMIN_PASSWORD     | The admin password for icecast server admin portal.                      | password
+Name                       | Description                                                            | Default Value
+---------------------------|------------------------------------------------------------------------| ---------------
+ICECAST_ADMIN_PASSWORD     | The admin password for icecast server admin portal.                    | password
 ICECAST_SOURCE_PASSWORD    | The password used to authenticate icecast stream source, like liquidsoap.| password
-ICECAST_RELAY_PASSWORD     | Icecast relay password                                                   | password
-LIQUIDSOAP_SOURCE_PASSWORD | The password used to authenticate live stream mic to liquidsoap server.  | password
-DJANGO_SECRET              | The secret value used in the django server running inside.               | django-insecure-secret
-ADMIN_PASSWORD             | The password used to login to the web admin UI                           | password
+ICECAST_RELAY_PASSWORD     | Icecast relay password                                                 | password
+LIQUIDSOAP_SOURCE_PASSWORD | The password used to authenticate live stream mic to liquidsoap server. | password
+DJANGO_SECRET              | The secret value used in the django server running inside.             | django-insecure-secret
+ADMIN_PASSWORD             | The password used to login to the web admin UI                         | password
+BACKEND_DATABASE_ENGINE    |                          | 
+BACKEND_DATABASE_NAME      |                          | db.sqlite3
+BACKEND_DATABASE_USER      |                          | 
+BACKEND_DATABASE_PASSWORD  |                          | 
+BACKEND_DATABASE_HOST      |                          | 
+BACKEND_DATABASE_PORT      |                          | 
 
 ## How to run
 1. Update icecast admin password in environment variable 'ICECAST_ADMIN_PASSWORD' otherwise will default to 'password' 
@@ -49,4 +55,7 @@ TODO Items:
 4. add API_SERVER_HOST to readme
 5. Upload media files to S3 in API server
 6. Install database seperatly and update
-4. add ICECAST_SERVER_HOST to readme
+7. add ICECAST_SERVER_HOST to readme
+8. Make media url accessible
+9. Update internal communication to use internal IP
+10. 
