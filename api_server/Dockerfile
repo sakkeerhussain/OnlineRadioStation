@@ -4,6 +4,7 @@ MAINTAINER sakkeerhussainp@gmail.com
 RUN apt-get update 
 RUN apt-get update
 RUN apt-get install -y python3-pip
+RUN apt-get install -y python3-psycopg2
 
 COPY ./requirements.txt ./requirements.txt
 COPY ./api_server ./api_server
