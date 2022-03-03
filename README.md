@@ -19,7 +19,7 @@ BACKEND_DATABASE_HOST      |                          |
 BACKEND_DATABASE_PORT      |                          | 
 AWS_ACCESS_KEY_ID      |                          | 
 AWS_SECRET_ACCESS_KEY      |                          | 
-DEFAULT_FILE_STORAGE      |                          | 
+DEFAULT_FILE_STORAGE      |                          | django.core.files.storage.FileSystemStorage
 AWS_STORAGE_BUCKET_NAME      |                          | 
 AWS_S3_REGION_NAME      |                          | 
 
