@@ -2,6 +2,7 @@ from django.db import models
 
 
 class MusicSchedule(models.Model):
+    name = models.CharField(max_length=100, null=True, blank=True)
     music = models.FileField(upload_to='./music', null=True, blank=True)
     music_url = models.CharField(max_length=500, null=True, blank=True)
     play_from = models.DateTimeField()
